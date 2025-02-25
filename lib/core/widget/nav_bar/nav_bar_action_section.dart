@@ -25,7 +25,7 @@ class NavBarActionsSection extends StatelessWidget {
               text: navData[index].title,
               activeColor: AppColors.orange,
               inactiveColor: AppColors.green,
-              style: AppStyles.style16bold,
+              style: AppStyles.style16bold(context),
             ),
           );
         },

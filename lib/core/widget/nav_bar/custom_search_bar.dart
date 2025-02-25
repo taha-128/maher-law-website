@@ -12,7 +12,7 @@ class CustomSearchBar extends StatelessWidget {
     return AnimSearchBar(
       width: 400,
       
-      style: AppStyles.style16bold,
+      style: AppStyles.style16bold(context),
       helpText: 'ابحث',
       color: Colors.blueGrey.shade900,
       textFieldColor: Colors.blueGrey.shade900,
