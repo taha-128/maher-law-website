@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:maher_law/core/theme/app_colors.dart';
+import 'package:maher_law/core/theme/app_styles.dart';
+import 'package:maher_law/core/widget/hover_text_button.dart';
+import 'package:maher_law/core/widget/nav_bar/nav_data.dart';
+
+class NavBarActionsSection extends StatelessWidget {
+  const NavBarActionsSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: List.generate(
+        navData.length,
+        (index) {
+          return Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+            child: HoverTextButton(
+              onPressed: () {
+                context.pushReplacement(navData[index].route);
+              },
+              text: navData[index].title,
+              activeColor: AppColors.orange,
+              inactiveColor: AppColors.green,
+              style: AppStyles.style16bold,
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
