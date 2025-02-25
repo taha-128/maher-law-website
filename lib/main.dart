@@ -1,8 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:maher_law/core/helpers/app_router.dart';
 import 'package:maher_law/core/helpers/size_config.dart';
+import 'package:maher_law/core/theme/app_colors.dart';
 
 import 'firebase_options.dart';
 
@@ -20,21 +22,27 @@ class MaherApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig.init(context);
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      locale: const Locale('ar'),
-      supportedLocales: const [
-        Locale('ar'),
-        Locale('en'),
-      ],
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      title: 'Maher',
-      theme: ThemeData.light(useMaterial3: true),
-      routerConfig: AppRouter.router,
+    return ScreenUtilInit(
+      // designSize: ScreenUtil.,
+      designSize: Size(1920, 1080),
+      builder: (context, child) {
+        return MaterialApp.router(
+          debugShowCheckedModeBanner: false,
+          locale: const Locale('ar'),
+          supportedLocales: const [
+            Locale('ar'),
+            Locale('en'),
+          ],
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+          ],
+          title: 'Maher',
+          theme: ThemeData.light(useMaterial3: true).copyWith(scaffoldBackgroundColor: AppColors.white,),
+          routerConfig: AppRouter.router,
+        );
+      },
     );
   }
 }

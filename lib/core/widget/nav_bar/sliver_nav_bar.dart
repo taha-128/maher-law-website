@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:maher_law/core/widget/nav_bar/nav_bar_action_section.dart';
 
 import '../../../../../core/theme/app_images.dart';
+import 'nav_contact_button.dart';
 
 class SliverNavBar extends StatelessWidget {
   const SliverNavBar({super.key});
@@ -10,12 +11,14 @@ class SliverNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverPersistentHeader(
       pinned: true,
+      floating: false,
       delegate: _SliverAppBarDelegate(
         minHeight: 90,
         maxHeight: 105,
         child: Container(
           padding: EdgeInsets.only(top: 20, bottom: 14, right: 140, left: 40),
           decoration: BoxDecoration(
+            color: Colors.white,
             border: Border(
               bottom: BorderSide(color: Colors.grey.shade400, width: .6),
             ),
@@ -26,18 +29,8 @@ class SliverNavBar extends StatelessWidget {
             children: [
               Image.asset(AppImages.navLogo, fit: BoxFit.fill),
               Expanded(child: NavBarActionsSection()),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.search),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.shopping_cart),
-                  ),
-                ],
-              ),
+              NavContactButton(),
+              // CustomSearchBar(),
             ],
           ),
         ),
