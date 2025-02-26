@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:maher_law/core/theme/app_colors.dart';
 import 'package:maher_law/core/theme/app_icons.dart';
 
@@ -19,25 +18,27 @@ class NavContactButton extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(100),
       ),
-      child: SizeConfig.width > SizeConfig.tablet
-          ? Row(
-              spacing: 15,
-              children: [
-                Text(
-                  '01050764021',
-                  textDirection: TextDirection.ltr,
-                  style: AppStyles.style16bold(context).copyWith(
-                    color: Colors.white,
-                  ),
+      child: Row(
+        spacing: 15,
+        children: [
+          Text(
+            'تواصل معنا',
+            textDirection: TextDirection.ltr,
+            style: AppStyles.style16bold(context).copyWith(
+              color: Colors.white,
+              shadows: [
+                BoxShadow(
+                  color: Colors.white38,
                 ),
-                SvgPicture.asset(
-                  AppIcons.phone,
-                )
               ],
-            )
-          : SvgPicture.asset(
-              AppIcons.phone,
             ),
+          ),
+          SvgPicture.asset(
+            AppIcons.whatsapp,
+            width: 30,
+          )
+        ],
+      ),
     );
   }
 }

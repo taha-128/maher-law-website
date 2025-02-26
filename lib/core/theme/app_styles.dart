@@ -6,12 +6,27 @@ import 'package:maher_law/core/theme/app_colors.dart';
 import '../helpers/size_config.dart';
 
 abstract class AppStyles {
+  static TextStyle style16medium(BuildContext context) => GoogleFonts.cairo(
+        fontSize: getResponsiveFontSize(context, fontSize: 16),
+        fontWeight: FontWeight.w500,
+      );
   static TextStyle style16bold(BuildContext context) => GoogleFonts.cairo(
         fontSize: getResponsiveFontSize(context, fontSize: 16),
         fontWeight: FontWeight.bold,
       );
+  static TextStyle style18bold(BuildContext context) => GoogleFonts.cairo(
+        fontSize: getResponsiveFontSize(context, fontSize: 22),
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      );
+
+  static TextStyle style22bold(BuildContext context) => GoogleFonts.cairo(
+        fontSize: getResponsiveFontSize(context, fontSize: 22),
+        fontWeight: FontWeight.w900,
+        color: Colors.white,
+      );
   static TextStyle style30bold(BuildContext context) => GoogleFonts.cairo(
-        fontSize: getResponsiveFontSize(context, fontSize: 60),
+        fontSize: getResponsiveFontSize(context, fontSize: 40),
         fontWeight: FontWeight.bold,
         color: AppColors.darkGreen,
       );

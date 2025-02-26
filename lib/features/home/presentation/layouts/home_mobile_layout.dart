@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/widget/nav_bar/sliver_nav_bar.dart';
-import '../widgets/home_welcome_section.dart';
+import '../widgets/welcome_section/home_welcome_section.dart';
 
 class HomeMobileLayout extends StatelessWidget {
   const HomeMobileLayout({super.key});

@@ -26,6 +26,7 @@ dependencies:
   go_router: ^14.8.0
   google_fonts: ^6.2.1
   responsive_sizer: ^3.3.1
+  zoom_tap_animation: ^1.1.0
 
 dev_dependencies:
   flutter_lints: ^5.0.0
@@ -37,10 +38,10 @@ flutter:
   assets:
     - assets/images/
     - assets/svgs/
-  # example:
+
   # fonts:
-  #   - family: Schyler
+  #   - family: Cairo
   #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  #       - asset: assets/fonts/Cairo-Bold.ttf
+  #       - asset: assets/fonts/Cairo-SemiBold.ttf
+  
