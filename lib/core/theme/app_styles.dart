@@ -19,7 +19,7 @@ abstract class AppStyles {
         fontWeight: FontWeight.bold,
         color: Colors.black,
       );
-
+      
   static TextStyle style22bold(BuildContext context) => GoogleFonts.cairo(
         fontSize: getResponsiveFontSize(context, fontSize: 22),
         fontWeight: FontWeight.w900,

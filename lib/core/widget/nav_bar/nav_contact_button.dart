@@ -28,7 +28,10 @@ class NavContactButton extends StatelessWidget {
               color: Colors.white,
               shadows: [
                 BoxShadow(
-                  color: Colors.white38,
+                  color: Colors.black26,
+                  spreadRadius: .5,
+                  blurRadius: 30,
+                  offset: Offset(0, 2),
                 ),
               ],
             ),

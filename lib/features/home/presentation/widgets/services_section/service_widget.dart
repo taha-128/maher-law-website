@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:maher_law/core/theme/app_colors.dart';
-import 'package:maher_law/core/theme/app_icons.dart';
 import 'package:maher_law/core/theme/app_styles.dart';
 import 'package:maher_law/core/widget/hover_button.dart';
+import 'package:maher_law/features/home/data/models/service_model.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class ServiceWidget extends StatefulWidget {
-  const ServiceWidget({super.key});
+  const ServiceWidget({super.key, required this.service});
+  final ServiceModel service;
 
   @override
   State<ServiceWidget> createState() => _ServiceWidgetState();
@@ -46,20 +47,20 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                 shape: BoxShape.rectangle,
               ),
               child: SvgPicture.asset(
-                AppIcons.hammer,
+                widget.service.icon,
                 width: 35,
               ),
             ),
             SizedBox(height: 14),
             Text(
-              'عقود التكنولوجيا',
+              widget.service.title,
               style: AppStyles.style18bold(context).copyWith(
                 color: Colors.black,
               ),
             ),
             SizedBox(height: 6),
             Text(
-              'عقد توريد وترخيص استخدام البرمجيات',
+              widget.service.dsecription,
               style: AppStyles.style16bold(context).copyWith(
                 color: AppColors.grey,
               ),
