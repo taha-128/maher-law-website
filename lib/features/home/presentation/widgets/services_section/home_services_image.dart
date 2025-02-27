@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:maher_law/core/helpers/extensions/screen_details.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../../../core/theme/app_images.dart';
@@ -35,8 +34,8 @@ class HomeServicesImage extends StatelessWidget {
                 children: [
                   SizedBox(height: 10.h),
                   Text(
-                    // 'المجالات الاخرى',//TODO
-                    context.screenWidth.toString(),
+                    'المجالات الاخرى', //TODO
+                    // context.screenWidth.toString(),
                     style: AppStyles.style22bold(context),
                   ),
                   Spacer(),

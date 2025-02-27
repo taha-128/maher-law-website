@@ -16,7 +16,7 @@ class HomeWelcomeDetails extends StatelessWidget {
       children: [
         Text(
           'ماهر الشافعي',
-          style: AppStyles.style30bold(context),
+          style: AppStyles.style40bold(context),
         ),
         SizedBox(height: 16),
         Text(

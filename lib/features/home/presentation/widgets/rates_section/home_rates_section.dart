@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:maher_law/core/theme/app_icons.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
+
+import '../../../../../core/helpers/size_config.dart';
+import '../../../../../core/theme/app_colors.dart';
+import '../../../../../core/theme/app_styles.dart';
+
+class HomeRatesSection extends StatelessWidget {
+  const HomeRatesSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 80.h,
+      color: Colors.grey.shade50,
+      padding: EdgeInsets.only(
+        top: 7.5.h,
+        right: 6.w,
+        left: 4.w,
+        bottom: 7.5.h,
+      ),
+      width: SizeConfig.width,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SvgPicture.asset(
+            AppIcons.court,
+            height: 5.h,
+          ),
+          SizedBox(height: 14),
+          Text(
+            'ماذا قال عملاؤنا؟',
+            style: AppStyles.style16bold(context).copyWith(
+              color: Colors.black45,
+            ),
+          ),
+          SizedBox(height: 4),
+          Text(
+            'الشهادات',
+            style: AppStyles.style40bold(context).copyWith(
+              color: AppColors.green,
+            ),
+          ),
+          SizedBox(height: 5.h),
+        ],
+      ),
+    );
+  }
+}
