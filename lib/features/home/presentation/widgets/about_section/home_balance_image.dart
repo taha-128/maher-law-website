@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../../../core/theme/app_images.dart';
-import '../../../../../core/widget/hover_button.dart';
 
 class HomeBalanceImage extends StatelessWidget {
   const HomeBalanceImage({super.key});
@@ -14,17 +13,14 @@ class HomeBalanceImage extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          HoverButton(
-            endScale: 1.005,
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              width: 25.w,
-              height: 70.h,
-              child: Image.asset(
-                AppImages.balance,
-                fit: BoxFit.fill,
-                alignment: Alignment.center,
-              ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 30),
+            width: 25.w,
+            height: 70.h,
+            child: Image.asset(
+              AppImages.balance,
+              fit: BoxFit.fill,
+              alignment: Alignment.center,
             ),
           ),
         ],

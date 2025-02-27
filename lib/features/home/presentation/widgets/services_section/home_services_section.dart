@@ -12,9 +12,13 @@ class HomeServicesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 80.h,
-      color: Colors.white,
-      padding:
-          EdgeInsets.only(top: 7.5.h, right: 6.w, left: 4.w, bottom: 7.5.h),
+      color: Colors.grey.shade50,
+      padding: EdgeInsets.only(
+        top: 7.5.h,
+        right: 6.w,
+        left: 4.w,
+        bottom: 7.5.h,
+      ),
       width: SizeConfig.width,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,

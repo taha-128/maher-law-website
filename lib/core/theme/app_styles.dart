@@ -19,7 +19,7 @@ abstract class AppStyles {
         fontWeight: FontWeight.bold,
         color: Colors.black,
       );
-      
+
   static TextStyle style22bold(BuildContext context) => GoogleFonts.cairo(
         fontSize: getResponsiveFontSize(context, fontSize: 22),
         fontWeight: FontWeight.w900,
@@ -37,19 +37,17 @@ double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
   double responsiveFontSize = fontSize * scaleFactor;
 
   double lowerLimit = fontSize * .8;
-  double upperLimit = fontSize * 1.2;
+  double upperLimit = fontSize * 1.1;
 
   return responsiveFontSize.clamp(lowerLimit, upperLimit);
 }
 
 double getScaleFactor(BuildContext context) {
-  double width = context.screenWidth;
-
-  if (width < SizeConfig.mobile) {
-    return width / 900;
-  } else if (width < SizeConfig.tablet) {
-    return width / 1000;
+  if (context.screenWidth < SizeConfig.mobile) {
+    return context.screenWidth / 900;
+  } else if (context.screenWidth < SizeConfig.tablet) {
+    return context.screenWidth / 1000;
   } else {
-    return width / 1400;
+    return context.screenWidth / 1400;
   }
 }

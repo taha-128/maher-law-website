@@ -11,6 +11,7 @@ class HomeWelcomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.white,
       padding: EdgeInsets.only(top: 15.h, right: 6.w, left: 4.w, bottom: 7.5.h),
       width: SizeConfig.width,
       child: Row(

@@ -13,8 +13,12 @@ class HomeAboutSection extends StatelessWidget {
     return Container(
       height: 80.h,
       color: Colors.white,
-      padding:
-          EdgeInsets.only(top: 7.5.h, right: 6.w, left: 4.w, bottom: 7.5.h),
+      padding: EdgeInsets.only(
+        top: 7.5.h,
+        right: 6.w,
+        left: 4.w,
+        bottom: 7.5.h,
+      ),
       width: SizeConfig.width,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,

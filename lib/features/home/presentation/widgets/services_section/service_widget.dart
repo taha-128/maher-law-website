@@ -29,7 +29,7 @@ class _ServiceWidgetState extends State<ServiceWidget> {
       },
       endScale: 1.01,
       child: Container(
-        padding: EdgeInsets.only(right: 10, left: 10, top: 4.h),
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4.h),
         decoration: BoxDecoration(
           border: Border.all(
             color: isActive ? AppColors.green : Colors.black12,
@@ -54,6 +54,7 @@ class _ServiceWidgetState extends State<ServiceWidget> {
             SizedBox(height: 14),
             Text(
               widget.service.title,
+              textAlign: TextAlign.center,
               style: AppStyles.style18bold(context).copyWith(
                 color: Colors.black,
               ),
@@ -61,6 +62,7 @@ class _ServiceWidgetState extends State<ServiceWidget> {
             SizedBox(height: 6),
             Text(
               widget.service.dsecription,
+              textAlign: TextAlign.center,
               style: AppStyles.style16bold(context).copyWith(
                 color: AppColors.grey,
               ),

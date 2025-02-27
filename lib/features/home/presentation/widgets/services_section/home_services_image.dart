@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:maher_law/core/helpers/extensions/screen_details.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../../../core/theme/app_images.dart';
@@ -7,14 +7,12 @@ import '../../../../../core/theme/app_styles.dart';
 import '../../../../../core/widget/hover_button.dart';
 
 class HomeServicesImage extends StatelessWidget {
-  const HomeServicesImage({
-    super.key
-  });
+  const HomeServicesImage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 38.w,
+      width: 34.w,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -37,7 +35,8 @@ class HomeServicesImage extends StatelessWidget {
                 children: [
                   SizedBox(height: 10.h),
                   Text(
-                    'المجالات الاخرى',
+                    // 'المجالات الاخرى',//TODO
+                    context.screenWidth.toString(),
                     style: AppStyles.style22bold(context),
                   ),
                   Spacer(),
@@ -48,8 +47,7 @@ class HomeServicesImage extends StatelessWidget {
                       children: [
                         Text(
                           'انظر جميع مجالات الممارسة',
-                          style:
-                              AppStyles.style16medium(context).copyWith(
+                          style: AppStyles.style16medium(context).copyWith(
                             color: Colors.white70,
                           ),
                         ),
