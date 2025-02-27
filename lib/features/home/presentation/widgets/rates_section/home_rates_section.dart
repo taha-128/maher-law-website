@@ -6,6 +6,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../../../core/helpers/size_config.dart';
 import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/theme/app_styles.dart';
+import 'customers_rate_list.dart';
 
 class HomeRatesSection extends StatelessWidget {
   const HomeRatesSection({super.key});
@@ -25,9 +26,19 @@ class HomeRatesSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SvgPicture.asset(
-            AppIcons.court,
-            height: 5.h,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            spacing: 10,
+            children: [
+              SvgPicture.asset(
+                AppIcons.stars,
+                height: 5.h,
+              ),
+              SvgPicture.asset(
+                AppIcons.stars,
+                height: 5.h,
+              ),
+            ],
           ),
           SizedBox(height: 14),
           Text(
@@ -44,6 +55,11 @@ class HomeRatesSection extends StatelessWidget {
             ),
           ),
           SizedBox(height: 5.h),
+          SizedBox(
+            width: 50.w,
+            height: 34.h,
+            child: CustomersRateList(),
+          ),
         ],
       ),
     );

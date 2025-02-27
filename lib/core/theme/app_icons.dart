@@ -8,6 +8,7 @@ abstract class AppIcons {
   static const handshake = '$_iconsPath/handshake.svg';
   static const balance = '$_iconsPath/balance.svg';
   static const court = '$_iconsPath/court.svg';
+  static const stars = '$_iconsPath/stars.svg';
 
   static const menu = '$_iconsPath/menu.svg';
   static const phone = '$_iconsPath/phone.svg';

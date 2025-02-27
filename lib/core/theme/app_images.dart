@@ -8,4 +8,5 @@ abstract class AppImages {
   static const court = '$_imagesDebugPath/court.jpg';
   static const roman = '$_imagesDebugPath/roman.jpg';
   static const balance = '$_imagesDebugPath/balance.webp';
+  static const profilePic = '$_imagesDebugPath/profile_pic.jpg';
 }
