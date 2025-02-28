@@ -40,6 +40,9 @@ class MaherApp extends StatelessWidget {
           ],
           title: 'Maher',
           theme: ThemeData(
+            scrollbarTheme: ScrollbarThemeData(
+              thumbColor: WidgetStateProperty.all(AppColors.green),
+            ),
             useMaterial3: true,
             brightness: Brightness.light,
             scaffoldBackgroundColor: AppColors.white,

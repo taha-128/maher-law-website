@@ -92,7 +92,10 @@ class SliverTabletNavBar extends StatelessWidget {
                 fit: BoxFit.cover,
                 width: 150,
               ),
-              Expanded(child: NavBarActionsSection()),
+              Expanded(
+                  child: NavBarActionsSection(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 4),
+              )),
               // NavContactButton(),
             ],
           ),

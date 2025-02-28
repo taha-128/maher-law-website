@@ -30,12 +30,13 @@ class _AboutFeatureWidgetState extends State<AboutFeatureWidget> {
       },
       endScale: 1,
       child: Row(
-        spacing: 12,
+        mainAxisAlignment: MainAxisAlignment.start,
+        spacing: 6,
         children: [
           AnimatedContainer(
             duration: const Duration(milliseconds: 200),
-            width: isActive ? 40 : 35,
-            height: isActive ? 40 : 35,
+            width: isActive ? 35 : 30,
+            height: isActive ? 35 : 30,
             decoration: BoxDecoration(
               color: isActive ? AppColors.green : AppColors.orange,
               shape: BoxShape.rectangle,
@@ -47,6 +48,7 @@ class _AboutFeatureWidgetState extends State<AboutFeatureWidget> {
           ),
           Text(
             widget.text,
+            overflow: TextOverflow.ellipsis,
             style: AppStyles.style16bold(context).copyWith(
               color: AppColors.grey,
               fontWeight: FontWeight.w900,

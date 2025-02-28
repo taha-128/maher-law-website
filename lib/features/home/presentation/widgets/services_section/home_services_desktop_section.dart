@@ -5,8 +5,8 @@ import '../../../../../core/helpers/size_config.dart';
 import 'home_services_grid_view.dart';
 import 'home_services_image.dart';
 
-class HomeServicesSection extends StatelessWidget {
-  const HomeServicesSection({super.key});
+class HomeServicesDesktopSection extends StatelessWidget {
+  const HomeServicesDesktopSection({super.key});
 
   @override
   Widget build(BuildContext context) {

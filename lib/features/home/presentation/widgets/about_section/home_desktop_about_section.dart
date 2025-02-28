@@ -5,8 +5,8 @@ import '../../../../../core/helpers/size_config.dart';
 import 'home_about_details.dart';
 import 'home_balance_image.dart';
 
-class HomeAboutSection extends StatelessWidget {
-  const HomeAboutSection({super.key});
+class HomeDesktopAboutSection extends StatelessWidget {
+  const HomeDesktopAboutSection({super.key});
 
   @override
   Widget build(BuildContext context) {

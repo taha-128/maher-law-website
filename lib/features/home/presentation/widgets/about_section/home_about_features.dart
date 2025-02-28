@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'home_feature_widget.dart';
@@ -16,20 +17,30 @@ class HomeAboutFeatures extends StatelessWidget {
       'الجودة والمهنية والسرية',
       'أول متجر قانوني إلكتروني',
     ];
-    return GridView.builder(
-      physics: NeverScrollableScrollPhysics(),
-      shrinkWrap: false,
-      itemCount: 6,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisExtent: 8.h,
-        crossAxisSpacing: 20,
-        mainAxisSpacing: 10,
-      ),
-      itemBuilder: (context, index) {
-        return AboutFeatureWidget(text: features[index]);
-      },
-    );
+    if (SizeConfig.width < SizeConfig.mobile) {
+      return ListView.separated(
+        physics: NeverScrollableScrollPhysics(),
+        itemCount: features.length,
+        itemBuilder: (context, index) {
+          return AboutFeatureWidget(text: features[index]);
+        },
+        separatorBuilder: (context, index) => SizedBox(height: 4.h),
+      );
+    } else {
+      return GridView.builder(
+        physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: false,
+        itemCount: 6,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisExtent: 8.h,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+        ),
+        itemBuilder: (context, index) {
+          return AboutFeatureWidget(text: features[index]);
+        },
+      );
+    }
   }
 }
-

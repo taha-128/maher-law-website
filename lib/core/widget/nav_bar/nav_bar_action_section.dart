@@ -6,7 +6,8 @@ import 'package:maher_law/core/widget/hover_text_button.dart';
 import 'package:maher_law/core/widget/nav_bar/nav_data.dart';
 
 class NavBarActionsSection extends StatelessWidget {
-  const NavBarActionsSection({super.key});
+  const NavBarActionsSection({super.key, this.padding});
+  final EdgeInsets? padding;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class NavBarActionsSection extends StatelessWidget {
         (index) {
           return Container(
             alignment: Alignment.center,
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+            padding:padding ?? EdgeInsets.symmetric(vertical: 10, horizontal: 8),
             child: HoverTextButton(
               onPressed: () {
                 context.pushReplacement(navData[index].route);
