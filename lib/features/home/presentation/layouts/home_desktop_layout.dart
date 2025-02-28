@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:maher_law/core/widget/nav_bar/sliver_nav_bar.dart';
-import 'package:maher_law/features/home/presentation/widgets/consultant_banner_widget.dart';
-import 'package:maher_law/features/home/presentation/widgets/rates_section/home_rates_section.dart';
-import 'package:maher_law/features/home/presentation/widgets/services_section/home_services_section.dart';
-import 'package:maher_law/features/home/presentation/widgets/steps_section/home_steps_section.dart';
 
+import '../../../../core/widget/footer/footer_widget.dart';
 import '../widgets/about_section/home_about_section.dart';
+import '../widgets/consultant_banner_widget.dart';
+import '../widgets/rates_section/home_rates_section.dart';
+import '../widgets/services_section/home_services_section.dart';
+import '../widgets/steps_section/home_steps_section.dart';
 import '../widgets/welcome_section/home_welcome_section.dart';
 
 class HomeDesktopLayout extends StatelessWidget {
@@ -24,7 +25,9 @@ class HomeDesktopLayout extends StatelessWidget {
               HomeAboutSection(),
               ConsultantBanner(),
               HomeStepsSection(),
-              HomeRatesSection()
+              HomeRatesSection(),
+              Spacer(),
+              Footer(),
             ],
           ),
         ),

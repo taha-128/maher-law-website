@@ -13,4 +13,5 @@ abstract class AppIcons {
   static const menu = '$_iconsPath/menu.svg';
   static const phone = '$_iconsPath/phone.svg';
   static const whatsapp = '$_iconsPath/whatsapp.svg';
+  static const whatsappLight = '$_iconsPath/whatsapp_light.svg';
 }

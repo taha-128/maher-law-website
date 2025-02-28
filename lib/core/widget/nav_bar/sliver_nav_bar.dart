@@ -50,9 +50,9 @@ class SliverDesktopNavBar extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
-                AppImages.navLogo,
-                fit: BoxFit.cover,
-                width: 12.w,
+                AppImages.logo,
+                fit: BoxFit.contain,
+                width: 22.w,
               ),
               Expanded(child: NavBarActionsSection()),
               NavContactButton(),
@@ -88,7 +88,7 @@ class SliverTabletNavBar extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
-                AppImages.navLogo,
+                AppImages.logo,
                 fit: BoxFit.cover,
                 width: 150,
               ),
@@ -126,7 +126,7 @@ class SliverMobileNavBar extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
-                AppImages.navLogo,
+                AppImages.logo,
                 fit: BoxFit.cover,
               ),
               CustomIconButton(
