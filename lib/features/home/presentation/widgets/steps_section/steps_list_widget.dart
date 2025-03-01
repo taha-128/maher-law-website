@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../data/models/step_model.dart';
@@ -29,8 +30,30 @@ class StepsListWidget extends StatelessWidget {
             'إعداد وصياغة درافت العقد ثم النسخة النهائية بعد التعديلات اللازمة',
       ),
     ];
+    if (SizeConfig.width < SizeConfig.mobile) {
+      return Padding(
+        padding: EdgeInsets.symmetric(horizontal: 2.w),
+        child: Column(
+          spacing: 30,
+          children: List.generate(
+            4,
+            (index) {
+              return Padding(
+                padding: EdgeInsets.symmetric(horizontal: 2.w),
+                child: StepMobileWidget(
+                  index: index + 1,
+                  step: steps[index],
+                ),
+              );
+            },
+          ),
+        ),
+      );
+    }
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10.w),
+      padding: EdgeInsets.symmetric(
+        horizontal: SizeConfig.width > SizeConfig.tablet ? 10.w : 3.w,
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: List.generate(

@@ -22,7 +22,7 @@ class HomeStepsSection extends StatelessWidget {
           ),
         ],
       ),
-      height: 90.h,
+      // height: 90.h,
       child: Stack(
         children: [
           ClipRRect(
@@ -46,6 +46,34 @@ class HomeStepsSection extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class HomeMobileStepsSection extends StatelessWidget {
+  const HomeMobileStepsSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 4.h),
+      margin: EdgeInsets.symmetric(horizontal: 3.w, vertical: 5.h),
+      width: SizeConfig.width,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(40),
+        image: DecorationImage(
+          image: AssetImage(AppImages.court),
+          fit: BoxFit.cover,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black45,
+            spreadRadius: 1,
+            blurRadius: 30,
+          ),
+        ],
+      ),
+      child: HomeStepsSectionBody(),
     );
   }
 }

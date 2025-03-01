@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:maher_law/core/widget/hover_button.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import '../../helpers/size_config.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_icons.dart';
 import '../../theme/app_images.dart';
@@ -16,7 +17,9 @@ class FooterRightSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: SizeConfig.isMobile
+          ? CrossAxisAlignment.center
+          : CrossAxisAlignment.start,
       children: [
         Image.asset(
           AppImages.logo,
@@ -26,12 +29,14 @@ class FooterRightSection extends StatelessWidget {
         SizedBox(height: 4.h),
         Text(
           'نحرص على إيجاد الحل الأمثل للعقود التكنولوجية، ويسعى فريقنا إلى النجاح في تحقيق أهداف عملائنا والحفاظ على مصالحهم القانونية.',
-          // textAlign: TextAlign.center,
+          textAlign: SizeConfig.isMobile ? TextAlign.center : null,
           style: AppStyles.style16medium(context),
         ),
         SizedBox(height: 4.h),
         Row(
-          // mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: SizeConfig.isMobile
+              ? MainAxisAlignment.center
+              : MainAxisAlignment.start,
           spacing: 14,
           children: List.generate(
             3,
@@ -47,7 +52,7 @@ class FooterRightSection extends StatelessWidget {
               );
             },
           ),
-        )
+        ),
       ],
     );
   }
@@ -76,8 +81,8 @@ class _SocialMediaButtonState extends State<SocialMediaButton> {
       endScale: 1.05,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
-        height: 4.h,
-        width: 4.h,
+        height: 5.h,
+        width: 5.h,
         color: isActive ? AppColors.green : AppColors.orange,
         child: widget.index != 2
             ? Icon(widget.icons[widget.index], color: Colors.white)

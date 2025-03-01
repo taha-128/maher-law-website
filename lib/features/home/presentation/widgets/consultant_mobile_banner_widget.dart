@@ -8,18 +8,18 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_icons.dart';
 
-class ConsultantBanner extends StatelessWidget {
-  const ConsultantBanner({super.key});
+class ConsultantMobileBanner extends StatelessWidget {
+  const ConsultantMobileBanner({super.key});
 
   @override
   Widget build(BuildContext context) {
     return HoverButton(
       endScale: 1.05,
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 5.h, horizontal: 4.w),
+        margin: EdgeInsets.symmetric(vertical: 5.h, horizontal: 6.w),
         width: SizeConfig.width,
         child: Container(
-          padding: EdgeInsets.symmetric(vertical: 35, horizontal: 7.w),
+          padding: EdgeInsets.only(top: 4.h, bottom: 2.h, right: 20, left: 20),
           width: SizeConfig.width,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(40),
@@ -32,9 +32,10 @@ class ConsultantBanner extends StatelessWidget {
               end: Alignment.bottomLeft,
             ),
           ),
-          child: Row(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Spacer(),
+              // Spacer(),
               Column(
                 children: [
                   Text(
@@ -50,7 +51,7 @@ class ConsultantBanner extends StatelessWidget {
                   ),
                 ],
               ),
-              Spacer(),
+              SizedBox(height: 3.h),
               MaterialButton(
                 splashColor: AppColors.green,
                 elevation: 0,
@@ -64,6 +65,7 @@ class ConsultantBanner extends StatelessWidget {
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   spacing: 15,
                   children: [
                     Text(

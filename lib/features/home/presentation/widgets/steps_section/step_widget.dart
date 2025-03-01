@@ -97,3 +97,49 @@ class _StepWidgetState extends State<StepWidget> {
     );
   }
 }
+
+class StepMobileWidget extends StatelessWidget {
+  const StepMobileWidget({
+    super.key,
+    required this.step,
+    required this.index,
+  });
+  final int index;
+  final StepModel step;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        StepNumberWidget(index: index, size: 14.w),
+        SizedBox(height: 10),
+        Container(
+          padding: EdgeInsets.only(right: 10, left: 10, bottom: 4.h, top: 2.h),
+          // margin: EdgeInsets.symmetric(horizontal: 2.w),
+          color: Colors.white,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                step.title,
+                textAlign: TextAlign.center,
+                style: AppStyles.style22bold(context).copyWith(
+                  color: AppColors.green,
+                ),
+              ),
+              SizedBox(height: 14),
+              Text(
+                step.description,
+                textAlign: TextAlign.center,
+                style: AppStyles.style16bold(context).copyWith(
+                  color: AppColors.grey,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}

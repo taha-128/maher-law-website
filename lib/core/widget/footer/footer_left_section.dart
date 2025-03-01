@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import '../../helpers/size_config.dart';
 import '../../theme/app_styles.dart';
 
 class FooterLeftSection extends StatelessWidget {
@@ -9,7 +10,9 @@ class FooterLeftSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: SizeConfig.isMobile
+          ? CrossAxisAlignment.center
+          : CrossAxisAlignment.start,
       children: [
         Text(
           'اتصال',
@@ -17,23 +20,28 @@ class FooterLeftSection extends StatelessWidget {
         ),
         SizedBox(height: 8.h),
         Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: SizeConfig.isMobile
+              ? CrossAxisAlignment.center
+              : CrossAxisAlignment.start,
           spacing: 10.h,
           children: [
             Text(
               'الهاتف: 123456789',
+              textAlign: SizeConfig.isMobile ? TextAlign.center : null,
               style: AppStyles.style16medium(context).copyWith(
                 color: Colors.black,
               ),
             ),
             Text(
               'الايميل: example@gmail.com',
+              textAlign: SizeConfig.isMobile ? TextAlign.center : null,
               style: AppStyles.style16medium(context).copyWith(
                 color: Colors.black,
               ),
             ),
             Text(
               'الايميل: example@gmail.com',
+              textAlign: SizeConfig.isMobile ? TextAlign.center : null,
               style: AppStyles.style16medium(context).copyWith(
                 color: Colors.black,
               ),

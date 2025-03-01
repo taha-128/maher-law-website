@@ -6,9 +6,7 @@ import '../../../../../core/theme/app_images.dart';
 import '../../../../../core/widget/hover_button.dart';
 
 class HomeLawyerImage extends StatelessWidget {
-  const HomeLawyerImage({
-    super.key,
-  });
+  const HomeLawyerImage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +39,42 @@ class HomeLawyerImage extends StatelessWidget {
               );
             },
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class HomeMobileLawyerImage extends StatelessWidget {
+  const HomeMobileLawyerImage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(bottom: 4.h),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(40),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black26,
+            spreadRadius: .5,
+            blurRadius: 30,
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(40),
+        child: Image.asset(
+          AppImages.lawyer,
+          fit: BoxFit.cover,
+          // width: SizeConfig.width * .7,
+          errorBuilder: (context, error, stackTrace) {
+            return Icon(
+              Icons.error,
+              size: 40,
+              color: AppColors.orange,
+            );
+          },
         ),
       ),
     );

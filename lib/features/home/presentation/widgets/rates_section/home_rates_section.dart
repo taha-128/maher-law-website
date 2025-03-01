@@ -56,7 +56,7 @@ class HomeRatesSection extends StatelessWidget {
           ),
           SizedBox(height: 5.h),
           SizedBox(
-            width: 50.w,
+            width: SizeConfig.width > SizeConfig.tablet ? 50.w : 80.w,
             height: 34.h,
             child: CustomersRateList(),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:maher_law/core/widget/hover_button.dart';
 
 import '../../../../../core/theme/app_colors.dart';
@@ -12,10 +13,12 @@ class HomeWelcomeDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: SizeConfig.width < SizeConfig.tablet
+          ? CrossAxisAlignment.center
+          : CrossAxisAlignment.start,
       children: [
         Text(
-          'ماهر الشافعي',
+          'الوسيط القانوني',
           style: AppStyles.style46bold(context),
         ),
         SizedBox(height: 16),
@@ -25,6 +28,9 @@ class HomeWelcomeDetails extends StatelessWidget {
         ),
         SizedBox(height: 24),
         Row(
+          mainAxisAlignment: SizeConfig.width < SizeConfig.tablet
+              ? MainAxisAlignment.center
+              : MainAxisAlignment.start,
           spacing: 10,
           children: [
             HoverButton(

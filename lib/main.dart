@@ -14,6 +14,7 @@ void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   runApp(const MaherApp());
+  //TODO: nav bar additional space error
 }
 
 class MaherApp extends StatelessWidget {

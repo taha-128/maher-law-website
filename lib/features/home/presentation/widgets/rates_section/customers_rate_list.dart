@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:maher_law/core/theme/app_images.dart';
+import 'package:maher_law/core/widget/adaptive_layout.dart';
 
 import '../../../../../core/theme/app_colors.dart';
 import '../../../data/models/rate_model.dart';
@@ -79,7 +80,11 @@ class _CustomersRateListState extends State<CustomersRateList> {
             scrollDirection: Axis.horizontal,
             reverse: true,
             itemBuilder: (context, index) {
-              return RateItem(rate: rates[index]);
+              return AdaptiveLayout(
+                mobileLayout: (_) => RateMobileItem(rate: rates[index]),
+                tabletLayout: (_) => RateTabletItem(rate: rates[index]),
+                desktopLayout: (_) => RateDesktopItem(rate: rates[index]),
+              );
             },
           ),
         ),

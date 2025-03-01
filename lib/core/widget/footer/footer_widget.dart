@@ -20,17 +20,31 @@ class Footer extends StatelessWidget {
         Container(
           color: AppColors.cyan,
           width: SizeConfig.width,
-          padding:
-              EdgeInsets.only(top: 5.h, right: 8.w, left: 3.w, bottom: 8.h),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            spacing: 8.w,
-            children: [
-              Expanded(child: FooterRightSection()),
-              Expanded(child: FooterCenterSection()),
-              Expanded(child: FooterLeftSection()),
-            ],
+          padding: EdgeInsets.only(
+            top: 5.h,
+            right: SizeConfig.isMobile ? 3.w : 8.w,
+            left: 3.w,
+            bottom: 8.h,
           ),
+          child: SizeConfig.width > SizeConfig.mobile
+              ? Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  spacing: 8.w,
+                  children: [
+                    Expanded(child: FooterRightSection()),
+                    Expanded(child: FooterCenterSection()),
+                    Expanded(child: FooterLeftSection()),
+                  ],
+                )
+              : Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  spacing: 8.w,
+                  children: [
+                    FooterRightSection(),
+                    FooterCenterSection(),
+                    FooterLeftSection(),
+                  ],
+                ),
         ),
         Container(
           color: AppColors.orange,
@@ -39,6 +53,7 @@ class Footer extends StatelessWidget {
           child: Center(
             child: Text(
               '© حقوق النشر ٢٠٢٥. جميع الحقوق محفوظة لمهار الشافعي | maher-law',
+              textAlign: TextAlign.center,
               style: AppStyles.style16medium(context).copyWith(
                 color: Colors.white,
               ),

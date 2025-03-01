@@ -22,7 +22,7 @@ class HomeAboutDetails extends StatelessWidget {
         ),
         SizedBox(height: 1.h),
         Text(
-          'ماهر الشافعي',
+          'الوسيط القانوني',
           style: AppStyles.style40bold(context).copyWith(
             color: AppColors.green,
           ),
