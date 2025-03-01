@@ -15,7 +15,7 @@ class HomeServicesListView extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       itemCount: 4,
       itemBuilder: (context, index) {
-        return ServiceWidget(service: servicesData[index]);
+        return HomeServiceWidget(service: servicesData[index]);
       },
       separatorBuilder: (context, index) => SizedBox(height: 2.h),
     );

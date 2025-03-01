@@ -9,8 +9,8 @@ class NavData {
 
 List<NavData> navData = [
   NavData(title: 'الرئيسية', route: AppRouter.home),
-  NavData(title: 'المجالات القانونية', route: '/page'),
-  NavData(title: 'من نحن', route: '/page'),
-  NavData(title: 'المقالات', route: '/page'),
-  NavData(title: 'تواصل معنا', route: '/page'),
+  NavData(title: 'المجالات القانونية', route: AppRouter.services),
+  NavData(title: 'من نحن', route: AppRouter.about),
+  NavData(title: 'المقالات', route: AppRouter.blogs),
+  NavData(title: 'تواصل معنا', route: AppRouter.contact),
 ];

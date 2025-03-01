@@ -22,7 +22,7 @@ class HomeServicesGridView extends StatelessWidget {
           mainAxisSpacing: 4.h,
         ),
         itemBuilder: (context, index) {
-          return ServiceWidget(service: servicesData[index]);
+          return HomeServiceWidget(service: servicesData[index]);
         },
       ),
     );

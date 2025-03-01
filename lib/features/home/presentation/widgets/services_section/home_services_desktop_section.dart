@@ -25,7 +25,6 @@ class HomeServicesDesktopSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(child: HomeServicesGridView()),
-          // SizedBox(width: 10.w),
           HomeServicesImage(),
         ],
       ),

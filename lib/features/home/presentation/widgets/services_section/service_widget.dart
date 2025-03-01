@@ -6,15 +6,15 @@ import 'package:maher_law/core/widget/hover_button.dart';
 import 'package:maher_law/features/home/data/models/service_model.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class ServiceWidget extends StatefulWidget {
-  const ServiceWidget({super.key, required this.service});
+class HomeServiceWidget extends StatefulWidget {
+  const HomeServiceWidget({super.key, required this.service});
   final ServiceModel service;
 
   @override
-  State<ServiceWidget> createState() => _ServiceWidgetState();
+  State<HomeServiceWidget> createState() => _HomeServiceWidgetState();
 }
 
-class _ServiceWidgetState extends State<ServiceWidget> {
+class _HomeServiceWidgetState extends State<HomeServiceWidget> {
   bool isActive = false;
   @override
   Widget build(BuildContext context) {

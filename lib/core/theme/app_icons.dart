@@ -9,6 +9,9 @@ abstract class AppIcons {
   static const balance = '$_iconsPath/balance.svg';
   static const court = '$_iconsPath/court.svg';
   static const stars = '$_iconsPath/stars.svg';
+  static const handcuffs = '$_iconsPath/handcuffs.svg';
+  static const certificate = '$_iconsPath/certificate.svg';
+  static const lawBook = '$_iconsPath/law_book.svg';
 
   static const menu = '$_iconsPath/menu.svg';
   static const phone = '$_iconsPath/phone.svg';

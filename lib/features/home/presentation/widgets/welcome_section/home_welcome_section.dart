@@ -18,13 +18,10 @@ class HomeWelcomeSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
-            child: HomeWelcomeDetails(),
+            child: HomeWelcomeDetails()
           ),
           SizedBox(width: 5.w),
-          // SizedBox(
-          //   width: 40.w,
-          //   child: HomeWelcomeDetails(),
-          // ),
+         
           Expanded(child: HomeLawyerImage())
         ],
       ),
