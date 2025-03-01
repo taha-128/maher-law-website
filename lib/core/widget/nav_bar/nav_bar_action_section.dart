@@ -16,12 +16,22 @@ class NavBarActionsSection extends StatelessWidget {
       children: List.generate(
         navData.length,
         (index) {
+          bool isCurrentScreen = GoRouter.of(context)
+                  .routeInformationProvider
+                  .value
+                  .uri
+                  .toString() ==
+              navData[index].route;
           return Container(
             alignment: Alignment.center,
-            padding:padding ?? EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+            padding:
+                padding ?? EdgeInsets.symmetric(vertical: 10, horizontal: 8),
             child: HoverTextButton(
+              isCurrentScreen: isCurrentScreen,
               onPressed: () {
-                context.pushReplacement(navData[index].route);
+                if (!isCurrentScreen) {
+                  GoRouter.of(context).go(navData[index].route);
+                }
               },
               text: navData[index].title,
               activeColor: AppColors.orange,

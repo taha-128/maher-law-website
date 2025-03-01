@@ -8,6 +8,7 @@ class HoverTextButton extends StatefulWidget {
     required this.text,
     required this.activeColor,
     required this.style,
+    this.isCurrentScreen = false,
   });
 
   final GestureTapCallback? onPressed;
@@ -15,6 +16,7 @@ class HoverTextButton extends StatefulWidget {
   final Color activeColor;
   final TextStyle style;
   final Color? inactiveColor;
+  final bool isCurrentScreen;
 
   @override
   State<HoverTextButton> createState() => _HoverTextButtonState();
@@ -41,16 +43,20 @@ class _HoverTextButtonState extends State<HoverTextButton> {
           child: Text(
             widget.text,
             style: widget.style.copyWith(
-              color: isActive ? widget.activeColor : widget.inactiveColor,
+              color: isActive || widget.isCurrentScreen
+                  ? widget.activeColor
+                  : widget.inactiveColor,
             ),
           ),
         ),
         AnimatedContainer(
-          width: isActive ? 30 : 0,
+          width: isActive || widget.isCurrentScreen ? 30 : 0,
           height: 3,
           duration: const Duration(milliseconds: 250),
           decoration: BoxDecoration(
-            color: isActive ? widget.activeColor : widget.inactiveColor,
+            color: isActive || widget.isCurrentScreen
+                ? widget.activeColor
+                : widget.inactiveColor,
             borderRadius: BorderRadius.circular(2),
           ),
         ),

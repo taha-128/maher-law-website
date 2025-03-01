@@ -11,9 +11,7 @@ class PageNotFoundScreen extends StatelessWidget {
       body: Center(
         child: TextButton(
           onPressed: () {
-            //TODO
-            
-            GoRouter.of(context).goNamed(AppRouter.home);
+            GoRouter.of(context).go(AppRouter.home);
           },
           child: Text('Error 404'),
         ),
