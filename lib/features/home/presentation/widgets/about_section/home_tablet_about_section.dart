@@ -10,7 +10,7 @@ class HomeTabletAboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80.h,
+      // height: 80.h,
       color: Colors.white,
       padding: EdgeInsets.only(
         top: 7.5.h,

@@ -58,8 +58,8 @@ class ConsultantMobileBanner extends StatelessWidget {
                 focusElevation: 0,
                 hoverElevation: 0,
                 onPressed: () {},
-                height: 30,
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 16),
+                height: 24,
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 2.h),
                 color: Colors.white24,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),

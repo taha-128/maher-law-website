@@ -23,7 +23,7 @@ class FooterRightSection extends StatelessWidget {
       children: [
         Image.asset(
           AppImages.logo,
-          height: 8.h,
+          height: 12.h,
           fit: BoxFit.contain,
         ),
         SizedBox(height: 4.h),

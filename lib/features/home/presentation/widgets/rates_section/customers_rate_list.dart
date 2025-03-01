@@ -80,6 +80,7 @@ class _CustomersRateListState extends State<CustomersRateList> {
             scrollDirection: Axis.horizontal,
             reverse: true,
             itemBuilder: (context, index) {
+              // return RateDesktopItem(rate: rates[index]);
               return AdaptiveLayout(
                 mobileLayout: (_) => RateMobileItem(rate: rates[index]),
                 tabletLayout: (_) => RateTabletItem(rate: rates[index]),

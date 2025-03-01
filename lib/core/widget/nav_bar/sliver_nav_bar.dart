@@ -90,12 +90,13 @@ class SliverTabletNavBar extends StatelessWidget {
               Image.asset(
                 AppImages.logo,
                 fit: BoxFit.cover,
-                width: 150,
+                width: 20.w,
               ),
               Expanded(
-                  child: NavBarActionsSection(
-                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 4),
-              )),
+                child: NavBarActionsSection(
+                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 4),
+                ),
+              ),
               // NavContactButton(),
             ],
           ),
@@ -131,6 +132,7 @@ class SliverMobileNavBar extends StatelessWidget {
               Image.asset(
                 AppImages.logo,
                 fit: BoxFit.cover,
+                // width: 200,
               ),
               CustomIconButton(
                 onPressed: () {},

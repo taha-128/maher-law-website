@@ -15,6 +15,7 @@ class HomeRatesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 80.h,
+      width: SizeConfig.width,
       color: Colors.grey.shade50,
       padding: EdgeInsets.only(
         top: 7.5.h,
@@ -22,7 +23,6 @@ class HomeRatesSection extends StatelessWidget {
         left: 4.w,
         bottom: 7.5.h,
       ),
-      width: SizeConfig.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

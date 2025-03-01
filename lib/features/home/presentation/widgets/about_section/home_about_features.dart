@@ -18,18 +18,17 @@ class HomeAboutFeatures extends StatelessWidget {
       'أول متجر قانوني إلكتروني',
     ];
     if (SizeConfig.width < SizeConfig.mobile) {
-      return ListView.separated(
-        physics: NeverScrollableScrollPhysics(),
-        itemCount: features.length,
-        itemBuilder: (context, index) {
-          return AboutFeatureWidget(text: features[index]);
-        },
-        separatorBuilder: (context, index) => SizedBox(height: 4.h),
+      return Column(
+        spacing: 4.h,
+        children: List.generate(
+          features.length,
+          (index) => AboutFeatureWidget(text: features[index]),
+        ),
       );
     } else {
       return GridView.builder(
         physics: NeverScrollableScrollPhysics(),
-        shrinkWrap: false,
+        shrinkWrap:SizeConfig.isTablet ? true:  false,
         itemCount: 6,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,

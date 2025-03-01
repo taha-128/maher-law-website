@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maher_law/core/widget/nav_bar/sliver_nav_bar.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../../core/widget/footer/footer_widget.dart';
 import '../widgets/about_section/home_desktop_about_section.dart';
@@ -26,7 +27,7 @@ class HomeDesktopLayout extends StatelessWidget {
               ConsultantBanner(),
               HomeStepsSection(),
               HomeRatesSection(),
-              Spacer(),
+              SizedBox(height: 8.h),
               Footer(),
             ],
           ),

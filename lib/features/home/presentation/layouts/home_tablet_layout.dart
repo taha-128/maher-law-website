@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../../core/widget/footer/footer_widget.dart';
 import '../../../../core/widget/nav_bar/sliver_nav_bar.dart';
@@ -20,13 +21,13 @@ class HomeTabletLayout extends StatelessWidget {
         SliverList(
           delegate: SliverChildListDelegate.fixed(
             [
-              // HomeWelcomeSection(),
-              // HomeServicesTabletSection(),
-              // HomeTabletAboutSection(),
-              // ConsultantBanner(),
-              // HomeMobileStepsSection(),
+              HomeWelcomeSection(),
+              HomeServicesTabletSection(),
+              HomeTabletAboutSection(),
+              ConsultantBanner(),
+              HomeMobileStepsSection(),
               HomeRatesSection(),
-              Spacer(),
+              SizedBox(height: 8.h),
               Footer(),
             ],
           ),

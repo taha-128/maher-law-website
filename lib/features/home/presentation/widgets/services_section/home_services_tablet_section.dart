@@ -17,9 +17,9 @@ class HomeServicesTabletSection extends StatelessWidget {
         SizedBox(height: 2.h),
         Padding(
           padding: EdgeInsets.symmetric(
-              horizontal: SizeConfig.width < SizeConfig.mobile ? 20.w : 30.w),
+              horizontal: SizeConfig.width < SizeConfig.mobile ? 20.w : 30.w,),
           child: MaterialButton(
-            padding: EdgeInsets.symmetric(vertical: 14),
+            padding: EdgeInsets.only(top: 1.4.h, bottom: 1.4.h, right: 2.w),
             onPressed: () {},
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(24),
@@ -35,7 +35,7 @@ class HomeServicesTabletSection extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: 10),
                 Icon(
                   Icons.arrow_right_rounded,
                   color: Colors.white,

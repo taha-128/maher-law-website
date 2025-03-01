@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../../../core/theme/app_colors.dart';
@@ -37,12 +38,20 @@ class HomeAboutDetails extends StatelessWidget {
           ),
         ),
         SizedBox(height: 4.h),
-        Expanded(child: HomeAboutFeatures()),
+        if (SizeConfig.isDesktop) Expanded(child: HomeAboutFeatures()),
+        if (!SizeConfig.isDesktop) HomeAboutFeatures(),
+        SizedBox(height: 2.h),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomButton(
-              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 16),
+              padding: SizeConfig.isDesktop
+                  ? EdgeInsets.symmetric(
+                      horizontal: 18,
+                      vertical: 16,
+                    )
+                  // : null,
+                  : EdgeInsets.symmetric(horizontal: 8.w, vertical: 1.4.h),
               borderRadius: 14,
               onPressed: () {},
               child: Row(
