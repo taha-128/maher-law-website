@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:maher_law/core/widget/adaptive_layout.dart';
+import 'package:maher_law/features/services/presentation/layouts/services_mobile_layout.dart';
 
 import 'layouts/services_desktop_layout.dart';
-import 'layouts/services_mobile_layout.dart';
 import 'layouts/services_tablet_layout.dart';
 
 class ServicesScreen extends StatelessWidget {
@@ -11,10 +11,11 @@ class ServicesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: AdaptiveLayout(
-        desktopLayout: (_) => ServicesDesktopLayout(),
-        tabletLayout: (_) => ServicesTabletLayout(),
         mobileLayout: (_) => ServicesMobileLayout(),
+        tabletLayout: (_) => ServicesTabletLayout(),
+        desktopLayout: (_) => ServicesDesktopLayout(),
       ),
     );
   }

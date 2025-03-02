@@ -22,14 +22,12 @@ class ServicesMobileLayout extends StatelessWidget {
         SliverList(
           delegate: SliverChildListDelegate.fixed(
             [
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 4.h),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [LearnMoreButton()],
-                ),
+              // SizedBox(height: .h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [LearnMoreButton()],
               ),
-              SizedBox(height: 4.h),
+              SizedBox(height: 6.h),
               ServicesImageWidget(),
               SizedBox(height: 10.h),
               ServicesBlogsSection(),

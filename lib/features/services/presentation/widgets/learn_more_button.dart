@@ -10,6 +10,7 @@ class LearnMoreButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DecoratedButton(
+      padding: EdgeInsets.symmetric(vertical: 1.h, horizontal: 2.w),
       onTap: () {},
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -18,8 +19,8 @@ class LearnMoreButton extends StatelessWidget {
             'تعمق أكثر',
             style: AppStyles.style18bold(context).copyWith(color: Colors.white),
           ),
-          SizedBox(width: 2.w),
-          Icon(Icons.chat, color: Colors.white, size: 35)
+          SizedBox(width: 2.4.w),
+          Icon(Icons.chat, color: Colors.white, size: 3.w)
         ],
       ),
     );
