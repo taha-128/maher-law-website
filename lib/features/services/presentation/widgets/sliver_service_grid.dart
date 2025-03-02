@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../../core/theme/app_icons.dart';
@@ -54,8 +55,12 @@ class SliverServicesGrid extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 6.h),
       sliver: SliverToBoxAdapter(
         child: StaggeredGrid.count(
-          crossAxisCount: 3,
-          crossAxisSpacing: 2.w,
+          crossAxisCount: SizeConfig.isDesktop
+              ? 3
+              : SizeConfig.isTablet
+                  ? 2
+                  : 1,
+          crossAxisSpacing: 3.w,
           mainAxisSpacing: 4.h,
           children: List.generate(
             services.length,

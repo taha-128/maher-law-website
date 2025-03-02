@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:maher_law/features/error/presentation/page_not_found_screen.dart';
+import 'package:maher_law/features/error/page_not_found_screen.dart';
 import 'package:maher_law/features/home/presentation/home_screen.dart';
 import 'package:maher_law/features/services/presentation/services_screen.dart';
 

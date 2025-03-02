@@ -21,7 +21,7 @@ class ServicesImageWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(40),
         image: DecorationImage(
           image: AssetImage(AppImages.team),
-          fit: BoxFit.fitWidth,
+          fit: BoxFit.cover,
         ),
         boxShadow: [
           BoxShadow(

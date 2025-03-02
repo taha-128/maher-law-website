@@ -40,6 +40,7 @@ class ServiceWidget extends StatelessWidget {
               child: SvgPicture.asset(
                 service.icon,
                 width: 3.w,
+                fit: BoxFit.cover,
               ),
             ),
             SizedBox(height: 14),
