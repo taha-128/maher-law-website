@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 
 abstract class AppIcons {
   static const _iconsPath = kDebugMode ? 'svgs' : 'assets/svgs';
+  static const _lottiesPath = kDebugMode ? 'lotties' : 'assets/lotties';
 
   static const hammer = '$_iconsPath/hammer.svg';
   static const shield = '$_iconsPath/shield.svg';
@@ -17,4 +18,6 @@ abstract class AppIcons {
   static const phone = '$_iconsPath/phone.svg';
   static const whatsapp = '$_iconsPath/whatsapp.svg';
   static const whatsappLight = '$_iconsPath/whatsapp_light.svg';
+
+  static const error404 = '$_lottiesPath/404.json';
 }

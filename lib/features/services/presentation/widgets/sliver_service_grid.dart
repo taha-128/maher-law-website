@@ -52,7 +52,7 @@ class SliverServicesGrid extends StatelessWidget {
     ];
 
     return SliverPadding(
-      padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 6.h),
+      padding: EdgeInsets.symmetric(horizontal: 6.w),
       sliver: SliverToBoxAdapter(
         child: StaggeredGrid.count(
           crossAxisCount: SizeConfig.isDesktop

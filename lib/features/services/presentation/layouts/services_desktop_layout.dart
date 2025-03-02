@@ -18,7 +18,9 @@ class ServicesDesktopLayout extends StatelessWidget {
       slivers: [
         SliverDesktopNavBar(),
         SliverToBoxAdapter(child: ServicesHeaderSection()),
+        SliverToBoxAdapter(child: SizedBox(height: 6.h)),
         SliverServicesGrid(),
+        SliverToBoxAdapter(child: SizedBox(height: 3.h)),
         SliverList(
           delegate: SliverChildListDelegate.fixed(
             [
@@ -30,7 +32,7 @@ class ServicesDesktopLayout extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 4.h),
-              ServicesImageWidget(),
+              ServicesDesktopImageWidget(),
               SizedBox(height: 10.h),
               ServicesBlogsSection(),
               SizedBox(height: 10.h),

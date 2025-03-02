@@ -18,17 +18,18 @@ class ServicesMobileLayout extends StatelessWidget {
       slivers: [
         SliverMobileNavBar(),
         SliverToBoxAdapter(child: ServicesHeaderSection()),
+        SliverToBoxAdapter(child: SizedBox(height: 5.h)),
         SliverServicesGrid(),
+        SliverToBoxAdapter(child: SizedBox(height: 3.h)),
         SliverList(
           delegate: SliverChildListDelegate.fixed(
             [
-              // SizedBox(height: .h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [LearnMoreButton()],
               ),
               SizedBox(height: 6.h),
-              ServicesImageWidget(),
+              ServicesMobileImageWidget(),
               SizedBox(height: 10.h),
               ServicesBlogsSection(),
               SizedBox(height: 10.h),

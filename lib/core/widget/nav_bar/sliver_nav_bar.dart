@@ -135,7 +135,9 @@ class SliverMobileNavBar extends StatelessWidget {
                 // width: 200,
               ),
               CustomIconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
                 color: AppColors.orange,
                 icon: AppIcons.menu,
                 width: 26,

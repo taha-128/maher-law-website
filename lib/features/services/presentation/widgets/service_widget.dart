@@ -6,6 +6,8 @@ import 'package:maher_law/core/widget/hover_button.dart';
 import 'package:maher_law/features/home/data/models/service_model.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import '../../../../core/helpers/size_config.dart';
+
 class ServiceWidget extends StatelessWidget {
   const ServiceWidget({super.key, required this.service});
   final ServiceModel service;
@@ -39,7 +41,7 @@ class ServiceWidget extends StatelessWidget {
               ),
               child: SvgPicture.asset(
                 service.icon,
-                width: 3.w,
+                width: SizeConfig.isMobile ? 8.w : 3.w,
                 fit: BoxFit.cover,
               ),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../../core/theme/app_styles.dart';
@@ -10,17 +11,24 @@ class LearnMoreButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DecoratedButton(
-      padding: EdgeInsets.symmetric(vertical: 1.h, horizontal: 2.w),
+      padding: EdgeInsets.symmetric(
+          vertical: 1.h, horizontal: SizeConfig.isMobile ? 4.w : 2.w),
       onTap: () {},
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             'تعمق أكثر',
-            style: AppStyles.style18bold(context).copyWith(color: Colors.white),
+            style: AppStyles.style18bold(context).copyWith(
+              color: Colors.white,
+            ),
           ),
           SizedBox(width: 2.4.w),
-          Icon(Icons.chat, color: Colors.white, size: 3.w)
+          Icon(
+            Icons.chat,
+            color: Colors.white,
+            size: SizeConfig.isMobile ? 6.w : 3.w,
+          )
         ],
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:maher_law/core/widget/hover_button.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 import '../../../../core/theme/app_colors.dart';
 
@@ -9,7 +9,8 @@ class DecoratedButton extends StatelessWidget {
     super.key,
     required this.child,
     this.padding,
-    this.reversed = false, this.onTap,
+    this.reversed = false,
+    this.onTap,
   });
   final GestureTapCallback? onTap;
   final Widget child;
@@ -18,10 +19,15 @@ class DecoratedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: HoverButton(
-        endScale: 1.04,
+    return MaterialButton(
+      splashColor: Colors.white,
+      focusColor: Colors.white,
+      highlightColor: Colors.white,
+      hoverColor: Colors.white,
+      onPressed: () {},
+      child: ZoomTapAnimation(
+        onTap: onTap,
+        begin: .985,
         child: Container(
           padding:
               padding ?? EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.5.h),

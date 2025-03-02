@@ -19,11 +19,13 @@ class HomeWelcomeDetails extends StatelessWidget {
       children: [
         Text(
           'الوسيط القانوني',
+          textAlign: !SizeConfig.isDesktop ? TextAlign.center : null,
           style: AppStyles.style46bold(context),
         ),
         SizedBox(height: 16),
         Text(
           'نحرص على إيجاد الحل الأمثل للعقود التكنولوجية، ويسعى فريقنا إلى النجاح في تحقيق أهداف عملائنا والحفاظ على مصالحهم القانونية.',
+          textAlign: !SizeConfig.isDesktop ? TextAlign.center : null,
           style: AppStyles.style16medium(context),
         ),
         SizedBox(height: 24),

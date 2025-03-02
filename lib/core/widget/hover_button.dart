@@ -79,6 +79,7 @@ class HoverWidgetState extends State<HoverButton>
         },
         onPointerUp: (event) async {
           Timer(const Duration(milliseconds: 150), () {
+            
             _controller.forward();
           });
           widget.onTap?.call();

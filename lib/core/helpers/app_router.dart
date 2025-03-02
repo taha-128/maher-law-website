@@ -11,7 +11,7 @@ abstract class AppRouter {
   static const blogs = '/blogs';
 
   static final router = GoRouter(
-    initialLocation: services,
+    initialLocation: home,
     routes: [
       GoRoute(
         path: home,

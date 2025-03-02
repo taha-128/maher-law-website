@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:maher_law/core/theme/app_colors.dart';
 import 'package:maher_law/core/theme/app_icons.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../theme/app_styles.dart';
 
@@ -13,7 +14,7 @@ class NavContactButton extends StatelessWidget {
     return MaterialButton(
       onPressed: () {},
       height: 30,
-      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 16),
+      padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 2.h),
       color: AppColors.green,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(100),
