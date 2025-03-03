@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
@@ -11,7 +12,7 @@ enum ProgressBarColorTheme {
     Colors.yellow,
     AppColors.orange,
   ]),
-  purple([Colors.pink, Colors.purpleAccent]);
+  purple([Colors.pink, Colors.deepPurpleAccent]);
 
   final List<Color> colors;
   const ProgressBarColorTheme(this.colors);
@@ -31,15 +32,22 @@ class CustomProgressBarWidget extends StatelessWidget {
     return Column(
       children: [
         SimpleCircularProgressBar(
+          size: SizeConfig.isMobile ? 160 : 100,
+          progressStrokeWidth: SizeConfig.isMobile ? 18 : 15,
+          backStrokeWidth: SizeConfig.isMobile ? 18 : 15,
           animationDuration: 2,
           progressColors: colorTheme.colors,
           mergeMode: true,
           onGetText: (double value) {
             return Text(
               '${value.toInt()}%',
-              style: AppStyles.style16bold(context).copyWith(
-                color: AppColors.grey,
-              ),
+              style: SizeConfig.isMobile
+                  ? AppStyles.style22bold(context).copyWith(
+                      color: AppColors.grey,
+                    )
+                  : AppStyles.style16bold(context).copyWith(
+                      color: AppColors.grey,
+                    ),
             );
           },
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../../core/theme/app_colors.dart';
@@ -32,7 +33,9 @@ class AboutDetails extends StatelessWidget {
         ),
         SizedBox(height: 3.h),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          padding: EdgeInsets.symmetric(
+            horizontal: SizeConfig.isDesktop ? 20.w : 8.w,
+          ),
           child: Text(
             bio,
             textAlign: TextAlign.center,

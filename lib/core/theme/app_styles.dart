@@ -74,7 +74,7 @@ double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
 
 double getScaleFactor(BuildContext context) {
   if (context.screenWidth < SizeConfig.mobile) {
-    return context.screenWidth / 900;
+    return context.screenWidth / 400;
   } else if (context.screenWidth < SizeConfig.tablet) {
     return context.screenWidth / 1000;
   } else {

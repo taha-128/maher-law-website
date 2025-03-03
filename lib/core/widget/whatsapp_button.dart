@@ -20,7 +20,7 @@ class WhatsappButton extends StatelessWidget {
             SnackBar(
               content: Center(
                 child: Text(
-                  'هناك خطأ ما يمكنك محادثتنا عبر رقم الواتس 01050764021',
+                  'هناك خطأ ما يمكنك محادثتنا عبر رقم الواتس 201050764021',
                   style: AppStyles.style16bold(context).copyWith(
                     color: Colors.white,
                   ),
