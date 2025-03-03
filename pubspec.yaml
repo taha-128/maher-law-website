@@ -32,6 +32,7 @@ dependencies:
   morphable_shape: ^2.0.0
   responsive_sizer: ^3.3.1
   sidebarx: ^0.17.1
+  simple_circular_progress_bar: ^1.0.2
   url_launcher: ^6.3.1
   zoom_tap_animation: ^1.1.0
 

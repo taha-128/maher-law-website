@@ -12,16 +12,18 @@ class HomeWelcomeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: EdgeInsets.only(top: 15.h, right: 6.w, left: 4.w, bottom: 7.5.h),
+      padding: EdgeInsets.only(
+        top: 15.h,
+        right: SizeConfig.isMobile ? 4.w : 6.w,
+        left: 4.w,
+        bottom: 7.5.h,
+      ),
       width: SizeConfig.width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Expanded(
-            child: HomeWelcomeDetails()
-          ),
+          Expanded(child: HomeWelcomeDetails()),
           SizedBox(width: 5.w),
-         
           Expanded(child: HomeLawyerImage())
         ],
       ),

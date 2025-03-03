@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import '../../../../core/helpers/size_config.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_styles.dart';
 
@@ -25,12 +26,14 @@ class ServicesHeaderSection extends StatelessWidget {
           ),
           child: Text(
             'كيف نستطيع مساعدتك ؟',
-            style: AppStyles.style16medium(context),
+            style: SizeConfig.isMobile
+                ? AppStyles.style18medium(context)
+                : AppStyles.style16medium(context),
           ),
         ),
         SizedBox(height: 2.h),
         Text(
-          'تفاصيل\nبعض مجالات الممارسة',
+          'تفاصيل بعض مجالات الممارسة',
           textAlign: TextAlign.center,
           style: AppStyles.style22bold(context).copyWith(
             color: AppColors.green,

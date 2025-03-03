@@ -34,8 +34,7 @@ class HomeServicesImage extends StatelessWidget {
                 children: [
                   SizedBox(height: 10.h),
                   Text(
-                    'المجالات الاخرى', //TODO
-                    // context.screenWidth.toString(),
+                    'المجالات الاخرى',
                     style: AppStyles.style22bold(context),
                   ),
                   Spacer(),

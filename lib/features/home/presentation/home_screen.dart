@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maher_law/core/helpers/size_config.dart';
 
 import '../../../core/widget/custom_drawer.dart';
 import '../../../core/widget/whatsapp_button.dart';
@@ -10,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: CustomDrawer(selectedIndex: 0),
+      drawer: SizeConfig.isMobile ? CustomDrawer(selectedIndex: 0) : null,
       backgroundColor: Colors.grey.shade50,
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingActionButton: WhatsappButton(),

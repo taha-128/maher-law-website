@@ -5,8 +5,10 @@ import 'package:maher_law/core/helpers/app_router.dart';
 import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:maher_law/core/theme/app_icons.dart';
 import 'package:maher_law/core/theme/app_styles.dart';
-import 'package:maher_law/features/services/presentation/widgets/decorated_button.dart';
+import 'package:maher_law/core/widget/hover_button.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+
+import '../../core/theme/app_colors.dart';
 
 class PageNotFoundScreen extends StatelessWidget {
   const PageNotFoundScreen({super.key});
@@ -37,18 +39,40 @@ class PageNotFoundScreen extends StatelessWidget {
                   style: AppStyles.style18bold(context),
                 ),
                 SizedBox(height: 5.h),
-                DecoratedButton(
-                  padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 8),
+                HoverButton(
+                  endScale: 1.02,
                   onTap: () {
                     GoRouter.of(context).go(AppRouter.home);
                   },
-                  child: Text(
-                    'الرجوع للصفحة الرئيسية',
-                    style: AppStyles.style18bold(context).copyWith(
-                      color: Colors.white,
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 8),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      boxShadow: [
+                        BoxShadow(
+                          color: AppColors.grey.withAlpha(60),
+                          spreadRadius: 1,
+                          blurRadius: 6,
+                          offset: Offset(0, 3),
+                        )
+                      ],
+                      gradient: LinearGradient(
+                        colors: [
+                          AppColors.orange,
+                          AppColors.green,
+                        ],
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                      ),
+                    ),
+                    child: Text(
+                      'الرجوع للصفحة الرئيسية',
+                      style: AppStyles.style18bold(context).copyWith(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
-                ),
+                )
               ],
             ),
           ),
