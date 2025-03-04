@@ -4,6 +4,7 @@ import 'package:maher_law/core/theme/app_colors.dart';
 import 'package:maher_law/core/theme/app_icons.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import '../../helpers/functions.dart';
 import '../../theme/app_styles.dart';
 
 class NavContactButton extends StatelessWidget {
@@ -12,7 +13,9 @@ class NavContactButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: () {
+        pushWhatsapp(context);
+      },
       height: 30,
       padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 2.h),
       color: AppColors.green,

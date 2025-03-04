@@ -55,7 +55,7 @@ class _HomeServiceWidgetState extends State<HomeServiceWidget> {
             Text(
               widget.service.title,
               textAlign: TextAlign.center,
-              style: AppStyles.style18bold(context).copyWith(
+              style: AppStyles.style22bold(context).copyWith(
                 color: Colors.black,
               ),
             ),

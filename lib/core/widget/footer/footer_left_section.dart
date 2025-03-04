@@ -16,7 +16,7 @@ class FooterLeftSection extends StatelessWidget {
       children: [
         Text(
           'اتصال',
-          style: AppStyles.style18bold(context).copyWith(color: Colors.black),
+          style: AppStyles.style22bold(context).copyWith(color: Colors.black),
         ),
         SizedBox(height: 8.h),
         Column(

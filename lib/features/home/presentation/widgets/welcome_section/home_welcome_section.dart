@@ -14,7 +14,7 @@ class HomeWelcomeSection extends StatelessWidget {
       color: Colors.white,
       padding: EdgeInsets.only(
         top: 15.h,
-        right: SizeConfig.isMobile ? 4.w : 6.w,
+        right:  6.w,
         left: 4.w,
         bottom: 7.5.h,
       ),

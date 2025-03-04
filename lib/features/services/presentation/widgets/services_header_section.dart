@@ -35,7 +35,7 @@ class ServicesHeaderSection extends StatelessWidget {
         Text(
           'تفاصيل بعض مجالات الممارسة',
           textAlign: TextAlign.center,
-          style: AppStyles.style22bold(context).copyWith(
+          style: AppStyles.style22black(context).copyWith(
             color: AppColors.green,
           ),
         ),

@@ -17,13 +17,10 @@ class ServicesScreen extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingActionButton: WhatsappButton(),
       resizeToAvoidBottomInset: false,
-      body: SafeArea(
-        bottom: false,
-        child: AdaptiveLayout(
-          mobileLayout: (_) => ServicesMobileLayout(),
-          tabletLayout: (_) => ServicesTabletLayout(),
-          desktopLayout: (_) => ServicesDesktopLayout(),
-        ),
+      body: AdaptiveLayout(
+        mobileLayout: (_) => ServicesMobileLayout(),
+        tabletLayout: (_) => ServicesTabletLayout(),
+        desktopLayout: (_) => ServicesDesktopLayout(),
       ),
     );
   }

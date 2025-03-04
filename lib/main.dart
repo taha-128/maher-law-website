@@ -1,7 +1,7 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:maher_law/core/helpers/app_router.dart';
 import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:maher_law/core/theme/app_colors.dart';
@@ -14,10 +14,15 @@ void main() async {
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-  // runApp(const MaherApp());
-  runApp(
-    DevicePreview(enabled: true, builder: (context) => const MaherApp(),),
-  );
+  GoogleFonts.config.allowRuntimeFetching = false;
+
+  runApp(const MaherApp());
+  // runApp(
+  //   DevicePreview(
+  //     enabled: false,
+  //     builder: (context) => const MaherApp(),
+  //   ),
+  // );
 }
 
 class MaherApp extends StatelessWidget {

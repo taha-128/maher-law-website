@@ -43,7 +43,7 @@ class ServicesBlogContent extends StatelessWidget {
             children: [
               SelectableText(
                 selectedBlog.blogTitle ?? selectedBlog.title,
-                style: AppStyles.style22bold(context).copyWith(
+                style: AppStyles.style22black(context).copyWith(
                   color: AppColors.green,
                 ),
               ),

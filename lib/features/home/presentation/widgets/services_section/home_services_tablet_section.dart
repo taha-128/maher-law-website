@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:maher_law/core/theme/app_colors.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -15,34 +14,35 @@ class HomeServicesTabletSection extends StatelessWidget {
       children: [
         HomeServicesListView(),
         SizedBox(height: 2.h),
-        Padding(
+        MaterialButton(
+          minWidth: 40.w,
           padding: EdgeInsets.symmetric(
-              horizontal: SizeConfig.width < SizeConfig.mobile ? 20.w : 30.w,),
-          child: MaterialButton(
-            padding: EdgeInsets.only(top: 1.4.h, bottom: 1.4.h, right: 2.w),
-            onPressed: () {},
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(24),
-            ),
-            // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-            color: AppColors.green,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'انظر جميع مجالات الممارسة',
-                  style: AppStyles.style16bold(context).copyWith(
-                    color: Colors.white,
-                  ),
-                ),
-                SizedBox(width: 10),
-                Icon(
-                  Icons.arrow_right_rounded,
+            vertical: 1.4.h,
+            horizontal: 2.w,
+          ),
+          onPressed: () {},
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(24),
+          ),
+          // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+          color: AppColors.green,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                '    انظر جميع مجالات الممارسة',
+                style: AppStyles.style16bold(context).copyWith(
                   color: Colors.white,
-                  size: 34,
                 ),
-              ],
-            ),
+              ),
+              SizedBox(width: 1.w),
+              Icon(
+                Icons.arrow_right_rounded,
+                color: Colors.white,
+                size: 34,
+              ),
+            ],
           ),
         ),
         SizedBox(height: 5.h),

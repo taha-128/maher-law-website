@@ -36,7 +36,7 @@ class PageNotFoundScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 3,
-                  style: AppStyles.style18bold(context),
+                  style: AppStyles.style22bold(context),
                 ),
                 SizedBox(height: 5.h),
                 HoverButton(
@@ -67,7 +67,7 @@ class PageNotFoundScreen extends StatelessWidget {
                     ),
                     child: Text(
                       'الرجوع للصفحة الرئيسية',
-                      style: AppStyles.style18bold(context).copyWith(
+                      style: AppStyles.style22bold(context).copyWith(
                         color: Colors.white,
                       ),
                     ),

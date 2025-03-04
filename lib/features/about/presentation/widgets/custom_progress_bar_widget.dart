@@ -42,7 +42,7 @@ class CustomProgressBarWidget extends StatelessWidget {
             return Text(
               '${value.toInt()}%',
               style: SizeConfig.isMobile
-                  ? AppStyles.style22bold(context).copyWith(
+                  ? AppStyles.style22black(context).copyWith(
                       color: AppColors.grey,
                     )
                   : AppStyles.style16bold(context).copyWith(

@@ -5,6 +5,7 @@ import 'package:maher_law/core/theme/app_styles.dart';
 import 'package:maher_law/core/widget/hover_button.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import '../../../../core/helpers/functions.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_icons.dart';
 
@@ -40,7 +41,7 @@ class ConsultantMobileBanner extends StatelessWidget {
                 children: [
                   Text(
                     'اطلب استشارة الان',
-                    style: AppStyles.style22bold(context).copyWith(
+                    style: AppStyles.style22black(context).copyWith(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -57,7 +58,9 @@ class ConsultantMobileBanner extends StatelessWidget {
                 elevation: 0,
                 focusElevation: 0,
                 hoverElevation: 0,
-                onPressed: () {},
+                onPressed: () {
+                  pushWhatsapp(context);
+                },
                 height: 24,
                 padding: EdgeInsets.symmetric(horizontal: 30, vertical: 2.h),
                 color: Colors.white24,

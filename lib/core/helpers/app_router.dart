@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:maher_law/features/about/presentation/about_screen.dart';
+import 'package:maher_law/features/contact/presentation/contact_screen.dart';
 import 'package:maher_law/features/error/page_not_found_screen.dart';
 import 'package:maher_law/features/home/presentation/home_screen.dart';
 import 'package:maher_law/features/services/presentation/services_screen.dart';
@@ -12,7 +13,7 @@ abstract class AppRouter {
   static const blogs = '/blogs';
 
   static final router = GoRouter(
-    initialLocation: about,
+    initialLocation: home,
     routes: [
       GoRoute(
         path: home,
@@ -25,6 +26,10 @@ abstract class AppRouter {
       GoRoute(
         path: services,
         builder: (context, state) => ServicesScreen(),
+      ),
+      GoRoute(
+        path: contact,
+        builder: (context, state) => ContactScreen(),
       ),
     ],
     errorBuilder: (context, state) => PageNotFoundScreen(),

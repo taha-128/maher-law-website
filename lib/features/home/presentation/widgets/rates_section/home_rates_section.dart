@@ -14,15 +14,10 @@ class HomeRatesSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80.h,
+      // height: 80.h,
       width: SizeConfig.width,
       color: Colors.grey.shade50,
-      padding: EdgeInsets.only(
-        top: 7.5.h,
-        right: 6.w,
-        left: 4.w,
-        bottom: 7.5.h,
-      ),
+
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -56,7 +51,6 @@ class HomeRatesSection extends StatelessWidget {
           ),
           SizedBox(height: 5.h),
           SizedBox(
-            width: SizeConfig.width > SizeConfig.tablet ? 50.w : 80.w,
             height: 34.h,
             child: CustomersRateList(),
           ),

@@ -35,7 +35,7 @@ class HomeServicesImage extends StatelessWidget {
                   SizedBox(height: 10.h),
                   Text(
                     'المجالات الاخرى',
-                    style: AppStyles.style22bold(context),
+                    style: AppStyles.style22black(context),
                   ),
                   Spacer(),
                   HoverButton(

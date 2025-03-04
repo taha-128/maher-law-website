@@ -8,8 +8,12 @@ import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/theme/app_styles.dart';
 
 class StepNumberWidget extends StatelessWidget {
-  const StepNumberWidget(
-      {super.key, required this.index, this.color, this.size,});
+  const StepNumberWidget({
+    super.key,
+    required this.index,
+    this.color,
+    this.size,
+  });
 
   final int index;
   final Color? color;
@@ -32,7 +36,7 @@ class StepNumberWidget extends StatelessWidget {
         child: Center(
           child: Text(
             index.toArabic(),
-            style: AppStyles.style22bold(context),
+            style: AppStyles.style22black(context),
           ),
         ),
       ),

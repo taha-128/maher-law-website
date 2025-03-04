@@ -16,13 +16,13 @@ class FooterCenterSection extends StatelessWidget {
       children: [
         Text(
           'ساعات العمل',
-          style: AppStyles.style18bold(context).copyWith(color: Colors.black),
+          style: AppStyles.style22bold(context).copyWith(color: Colors.black),
         ),
         SizedBox(height: 8.h),
         Column(
           crossAxisAlignment: SizeConfig.isMobile
-          ? CrossAxisAlignment.center
-          : CrossAxisAlignment.start,
+              ? CrossAxisAlignment.center
+              : CrossAxisAlignment.start,
           spacing: 10.h,
           children: [
             Text(

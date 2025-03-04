@@ -70,7 +70,7 @@ class _StepWidgetState extends State<StepWidget> {
                 Text(
                   widget.step.title,
                   textAlign: TextAlign.center,
-                  style: AppStyles.style22bold(context).copyWith(
+                  style: AppStyles.style22black(context).copyWith(
                     color: AppColors.green,
                   ),
                 ),
@@ -124,7 +124,7 @@ class StepMobileWidget extends StatelessWidget {
               Text(
                 step.title,
                 textAlign: TextAlign.center,
-                style: AppStyles.style22bold(context).copyWith(
+                style: AppStyles.style22black(context).copyWith(
                   color: AppColors.green,
                 ),
               ),

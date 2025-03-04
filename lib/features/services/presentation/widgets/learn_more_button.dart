@@ -19,7 +19,7 @@ class LearnMoreButton extends StatelessWidget {
         children: [
           Text(
             'تعمق أكثر',
-            style: AppStyles.style18bold(context).copyWith(
+            style: AppStyles.style22bold(context).copyWith(
               color: Colors.white,
             ),
           ),

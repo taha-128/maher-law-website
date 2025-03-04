@@ -23,7 +23,7 @@ class _CustomersRateListState extends State<CustomersRateList> {
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(Duration(seconds: 3), (Timer timer) {
+    _timer = Timer.periodic(Duration(seconds: 2), (Timer timer) {
       if (_currentPage < 2) {
         _currentPage++;
       } else {
@@ -33,7 +33,7 @@ class _CustomersRateListState extends State<CustomersRateList> {
 
       _pageController.animateToPage(
         _currentPage,
-        duration: Duration(milliseconds: 800),
+        duration: Duration(milliseconds: 500),
         curve: Curves.easeOut,
       );
     });

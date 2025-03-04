@@ -20,6 +20,11 @@ abstract class AppStyles {
         color: Colors.black,
       );
   static TextStyle style18bold(BuildContext context) => GoogleFonts.cairo(
+        fontSize: getResponsiveFontSize(context, fontSize: 18),
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      );
+  static TextStyle style22bold(BuildContext context) => GoogleFonts.cairo(
         fontSize: getResponsiveFontSize(context, fontSize: 22),
         fontWeight: FontWeight.bold,
         color: Colors.black,
@@ -35,7 +40,7 @@ abstract class AppStyles {
         fontWeight: FontWeight.w500,
         color: Colors.white,
       );
-  static TextStyle style22bold(BuildContext context) => GoogleFonts.cairo(
+  static TextStyle style22black(BuildContext context) => GoogleFonts.cairo(
         fontSize: getResponsiveFontSize(context, fontSize: 22),
         fontWeight: FontWeight.w900,
         color: Colors.white,

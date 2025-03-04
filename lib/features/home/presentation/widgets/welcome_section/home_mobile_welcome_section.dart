@@ -13,8 +13,8 @@ class HomeMobileWelcomeSection extends StatelessWidget {
     return Container(
       color: Colors.white,
       padding: EdgeInsets.only(
-        top: SizeConfig.width < SizeConfig.tablet ? 4.h : 15.h,
-        right: 6.w,
+        top: 4.h,
+        right: 4.w,
         left: 4.w,
         bottom: 7.5.h,
       ),
