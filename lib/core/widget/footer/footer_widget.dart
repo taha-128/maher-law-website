@@ -52,7 +52,7 @@ class Footer extends StatelessWidget {
           width: SizeConfig.width,
           child: Center(
             child: Text(
-              '© حقوق النشر ٢٠٢٥. جميع الحقوق محفوظة لمهار الشافعي | maher-law',
+              '© حقوق النشر ٢٠٢٥. جميع الحقوق محفوظة للوسيط القانونيٍ | maher-law',
               textAlign: TextAlign.center,
               style: AppStyles.style16medium(context).copyWith(
                 color: Colors.white,

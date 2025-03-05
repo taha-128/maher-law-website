@@ -30,7 +30,7 @@ class NavBarActionsSection extends StatelessWidget {
               isCurrentScreen: isCurrentScreen,
               onPressed: () {
                 if (!isCurrentScreen) {
-                  GoRouter.of(context).go(navData[index].route);
+                  context.go(navData[index].route);
                 }
               },
               text: navData[index].title,

@@ -14,7 +14,7 @@ class HomeTabletAboutSection extends StatelessWidget {
       color: Colors.white,
       padding: EdgeInsets.only(
         top: 7.5.h,
-        right: 6.w,
+        right: SizeConfig.isMobile ? 4.w : 6.w,
         left: 4.w,
         bottom: 7.5.h,
       ),

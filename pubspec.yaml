@@ -45,10 +45,9 @@ flutter:
     - assets/images/
     - assets/svgs/
     - assets/lotties/
-
-  fonts:
-    - family: Cairo
-      fonts:
-        - asset: assets/fonts/Cairo-Black.ttf
-        - asset: assets/fonts/Cairo-Bold.ttf
-        - asset: assets/fonts/Cairo-SemiBold.ttf
+  # fonts:
+  #   - family: Cairo
+  #     fonts:
+  #       - asset: assets/fonts/Cairo-Black.ttf
+  #       - asset: assets/fonts/Cairo-Bold.ttf
+  #       - asset: assets/fonts/Cairo-SemiBold.ttf

@@ -1,9 +1,15 @@
 import 'package:go_router/go_router.dart';
-import 'package:maher_law/features/about/presentation/about_screen.dart';
-import 'package:maher_law/features/contact/presentation/contact_screen.dart';
-import 'package:maher_law/features/error/page_not_found_screen.dart';
-import 'package:maher_law/features/home/presentation/home_screen.dart';
-import 'package:maher_law/features/services/presentation/services_screen.dart';
+import 'package:maher_law/core/widget/deferred_loader_widget.dart';
+
+import '../../features/about/presentation/about_screen.dart'
+    deferred as about_screen;
+import '../../features/contact/presentation/contact_screen.dart'
+    deferred as contact_screen;
+import '../../features/error/page_not_found_screen.dart'
+    deferred as error_screen;
+import '../../features/home/presentation/home_screen.dart';
+import '../../features/services/presentation/services_screen.dart'
+    deferred as services_screen;
 
 abstract class AppRouter {
   static const home = '/home';
@@ -21,17 +27,37 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: about,
-        builder: (context, state) => AboutScreen(),
+        builder: (context, state) {
+          return DeferredWidget(
+            libraryFuture: about_screen.loadLibrary(),
+            widgetBuilder: () => about_screen.AboutScreen(),
+          );
+        },
       ),
       GoRoute(
         path: services,
-        builder: (context, state) => ServicesScreen(),
+        builder: (context, state) {
+          return DeferredWidget(
+            libraryFuture: services_screen.loadLibrary(),
+            widgetBuilder: () => services_screen.ServicesScreen(),
+          );
+        },
       ),
       GoRoute(
         path: contact,
-        builder: (context, state) => ContactScreen(),
+        builder: (context, state) {
+          return DeferredWidget(
+            libraryFuture: contact_screen.loadLibrary(),
+            widgetBuilder: () => contact_screen.ContactScreen(),
+          );
+        },
       ),
     ],
-    errorBuilder: (context, state) => PageNotFoundScreen(),
+    errorBuilder: (context, state) {
+      return DeferredWidget(
+        libraryFuture: error_screen.loadLibrary(),
+        widgetBuilder: () => error_screen.PageNotFoundScreen(),
+      );
+    },
   );
 }

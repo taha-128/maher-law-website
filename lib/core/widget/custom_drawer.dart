@@ -29,7 +29,8 @@ class CustomDrawer extends StatelessWidget {
           color: AppColors.green,
         ),
       ),
-      controller: SidebarXController(selectedIndex: selectedIndex, extended: true),
+      controller:
+          SidebarXController(selectedIndex: selectedIndex, extended: true),
       items: List.generate(
         navData.length,
         (index) => SidebarXItem(
@@ -41,7 +42,7 @@ class CustomDrawer extends StatelessWidget {
             //         .toString() ==
             //     navData[index].route;
             // if (!isCurrentScreen) {
-            GoRouter.of(context).go(navData[index].route);
+            context.go(navData[index].route);
             // }
           },
           iconBuilder: (selected, hovered) {

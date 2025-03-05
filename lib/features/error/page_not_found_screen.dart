@@ -42,7 +42,7 @@ class PageNotFoundScreen extends StatelessWidget {
                 HoverButton(
                   endScale: 1.02,
                   onTap: () {
-                    GoRouter.of(context).go(AppRouter.home);
+                    context.go(AppRouter.home);
                   },
                   child: Container(
                     padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 8),

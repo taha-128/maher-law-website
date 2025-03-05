@@ -33,7 +33,7 @@ class ServicesBlogsSection extends StatelessWidget {
             SizedBox(height: 3.h),
             DecoratedButton(
               onTap: () {
-                GoRouter.of(context).go(AppRouter.blogs);
+                context.go(AppRouter.blogs);
               },
               child: Text(
                 'تعمق أكثر من خلال مدونتنا',

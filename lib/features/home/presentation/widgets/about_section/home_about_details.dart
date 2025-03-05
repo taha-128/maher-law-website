@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:maher_law/core/helpers/app_router.dart';
 import 'package:maher_law/core/helpers/size_config.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -53,7 +55,9 @@ class HomeAboutDetails extends StatelessWidget {
                   // : null,
                   : EdgeInsets.symmetric(horizontal: 8.w, vertical: 1.4.h),
               borderRadius: 14,
-              onPressed: () {},
+              onPressed: () {
+                context.go(AppRouter.about);
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
